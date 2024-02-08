@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  app:
+  c1:
     container_name: contenedor1
     image: alpine
     restart: always
@@ -11,7 +11,7 @@ services:
         ipv4_address: 192.168.20.10
     hostname: contenedor1
 
-  db:
+  c2:
     container_name: contenedor2
     image: alpine
     restart: always
