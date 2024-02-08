@@ -3,6 +3,7 @@ services:
   c1:
     container_name: contenedor1
     image: alpine
+    tty: true
     restart: always
     networks:
       red_externa:
@@ -10,11 +11,10 @@ services:
       red_interna:
         ipv4_address: 192.168.20.10
     hostname: contenedor1
-    command: ash
-
   c2:
     container_name: contenedor2
     image: alpine
+    tty: true
     restart: always
     networks:
       red_interna:
