@@ -7,7 +7,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: ${USUARIO}
-      WORDPRESS_DB_PASSWORD: ${CONTRASEÑA}
+      WORDPRESS_DB_PASSWORD: ${PASS}
       WORDPRESS_DB_NAME: ${BASEDEDATOS}
     ports:
       - ${PUERTO}:80
@@ -20,8 +20,8 @@ services:
     environment:
       MARIADB_DATABASE: ${BASEDEDATOS}
       MARIADB_USER: ${USUARIO}
-      MARIADB_PASSWORD: ${CONTRASEÑA}
-      MARIADB_ROOT_PASSWORD: ${CONTRASEÑA_ROOT}
+      MARIADB_PASSWORD: ${PASS}
+      MARIADB_ROOT_PASSWORD: ${PASS_ROOT}
     volumes:
       - mariadb_data:/var/lib/mysql
 volumes:
