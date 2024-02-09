@@ -1,0 +1,29 @@
+version: '3.1'
+services:
+  wordpress:
+    container_name: servidor_wp
+    image: wordpress:${VERSION_WP}
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${USUARIO}
+      WORDPRESS_DB_PASSWORD: ${CONTRASEÑA}
+      WORDPRESS_DB_NAME: ${BASEDEDATOS}
+    ports:
+      - ${PUERTO}:80
+    volumes:
+      - wordpress_data:/var/www/html
+  db:
+    container_name: servidor_mysql
+    image: mariadb:${VERSION_MDB}
+    restart: always
+    environment:
+      MARIADB_DATABASE: ${BASEDEDATOS}
+      MARIADB_USER: ${USUARIO}
+      MARIADB_PASSWORD: ${CONTRASEÑA}
+      MARIADB_ROOT_PASSWORD: ${CONTRASEÑA_ROOT}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+volumes:
+    wordpress_data:
+    mariadb_data:

@@ -1,0 +1,7 @@
+VERSION_WP=latest
+VERSION_MDB=latest
+PUERTO=8080
+USUARIO="prueba"
+CONTRASEÑA="asdasd"
+CONTRASEÑA_ROOT="asdasd"
+BASEDEDATOS="wordpress"
