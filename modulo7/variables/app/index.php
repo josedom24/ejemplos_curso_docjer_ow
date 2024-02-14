@@ -53,7 +53,7 @@
                         $today = date("d/m/Y");
                         echo $today;
                         echo '<br/>Versión PHP: ' . phpversion();
-                        echo '<br/>Versión de la aplicación: ' . getenv('APP_VERSION');
+                        echo '<br/>Versión de la aplicación: ' . getenv('VERSION');
                         ?>
                     </strong></p>
                     <a class="btn btn-primary page-scroll" href="#about">Click To Scroll Down!</a>
